@@ -3,3 +3,19 @@
 info:
   foo: bar
   someList: [2, 3, 7]
+
+  # Http Server
+server:
+  port: 8981
+
+spring:
+  application:
+    name: WowIsTheNameApp
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jcphgyhub/SpringCloudConfigServerTest
+          searchPaths: server-config
+          force-pull: true
+          skipSslValidation: true
